@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="./Develop/assets/script.js" defer></script>
+    <link rel="stylesheet" href="./Develop/assets/style.css" />
+    <title>Gjerenuk Password Generator</title>
+  </head>
+  <body>
+    <div class="wrapper">
+        <h1 class="title ">Gjerenuk Password Generator</h1>
+        <form class="formz">
+          <label for="">Number of Characters</label>
+          <div class="char-amount-container">
+            <input type="range" min="1" max="50" value="10" id="rangeCharAmt">
+            <input class="num-input" type="number" min="1" max="50" value="10" id="rangeCharNumber">
+          </div>
+    
+            <label for="includeUppercase">Include Uppercase</label>
+            <input type="checkbox" id="includeUppercase">
+         
+            <label for="includeNumbers">Include Numbers</label>
+            <input type="checkbox" id="IncludeNumbers">
+       
+            <label for="includeSymbols">Include Symbols</label>
+            <input type="checkbox" id="IncludeSymbols">
+                                      
+        </form>
+
+      
+      <div class="card">
+        <div class="card-body">
+          <textarea
+            readonly
+            id="passwordDisplay"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+        <div class="card-footer">
+          <button id="generate" class="boton">Generate Password</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
