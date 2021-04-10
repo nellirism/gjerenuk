@@ -32,7 +32,7 @@ Gjerenuk Password Generator generates a random password based on user-selected c
 - The application adapts to multiple screen sizes. 
 
 <a name="urlz"></a>
-### Follow The Link:
+## Follow The Link:
 
 https://nellirism.github.io/gjerenuk/
 
