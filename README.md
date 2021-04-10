@@ -42,7 +42,7 @@ https://nellirism.github.io/gjerenuk/
 <a name="demo"></a>
 ### Gjerenuk Demo
 
-<iframe src="https://drive.google.com/file/d/1q6X6RYJFIILIis81-cCqaNW7KKyDIKHO/preview" width="640" height="480"></iframe>
+https://drive.google.com/file/d/1q6X6RYJFIILIis81-cCqaNW7KKyDIKHO/view
 
 <a name="story"></a>
 ## User Story
