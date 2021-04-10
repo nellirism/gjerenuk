@@ -1,6 +1,14 @@
 # Gjerenuk Password Generator
 
-## Description
+1. [ Description. ](#desc)
+2. [ Follow the Link. ](#urlz)
+3. [ Gjerenuk Demo. ](#demo)
+4. [ Contributing. ](#contributing)
+5. [ License. ](#license)
+
+<a name="desc"></a>
+
+### Description
 
 Gjerenuk Password Generator generates a random password based on user-selected criteria which will run in the browser and features dynamically updated HTML and CSS powered by JavaScript code.
 
@@ -23,6 +31,10 @@ Gjerenuk Password Generator generates a random password based on user-selected c
 - Once the user finalized his/her options, the user then clicks the "Generate Password" button and will be presented with a password with complexity depending on the values checked by the user.
 
 - The application adapts to multiple screen sizes. 
+
+## Follow The Link:
+
+https://nellirism.github.io/gjerenuk/
 
 ## Password Generator Demo
 
