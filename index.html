@@ -11,38 +11,28 @@
   <body>
     <div class="wrapper">
         <h1 class="title ">Gjerenuk Password Generator</h1>
-        <form class="formz">
-          <label for="">Number of Characters</label>
-          <div class="char-amount-container">
-            <input type="range" min="1" max="50" value="10" id="rangeCharAmt">
-            <input class="num-input" type="number" min="1" max="50" value="10" id="rangeCharNumber">
+        <h4 class="password-display" id="passwordDisplay">Your Secure Password</h4>
+        <form id ="passwordGeneratorForm" class="form">
+          <label for="characterAmountNumber">Number of Characters</label>
+          <div class="character-amount-container">
+            <input type="range" min="1" max="50" value="10" id="characterAmountRange">
+            <input class="number-input" type="number" min="1" max="50" value="10" id="characterAmountNumber">
           </div>
     
             <label for="includeUppercase">Include Uppercase</label>
             <input type="checkbox" id="includeUppercase">
          
             <label for="includeNumbers">Include Numbers</label>
-            <input type="checkbox" id="IncludeNumbers">
+            <input type="checkbox" id="includeNumbers">
        
             <label for="includeSymbols">Include Symbols</label>
-            <input type="checkbox" id="IncludeSymbols">
-                                      
+            <input type="checkbox" id="includeSymbols">
+          
+            <button type="submit" class="boton">Generate Password</button>                                  
         </form>
-
-      
-      <div class="card">
-        <div class="card-body">
-          <textarea
-            readonly
-            id="passwordDisplay"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
-        </div>
-        <div class="card-footer">
-          <button id="generate" class="boton">Generate Password</button>
-        </div>
-      </div>
+          <!-- <section class="row">      
+              <button id="copy" class="boton">Copy to Clipboard</button>
+          </section> -->
     </div>
   </body>
 </html>

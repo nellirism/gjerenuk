@@ -27,7 +27,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Arial;
+  font-family: Arial, 'Times New Roman', Times, serif;
 }
 
 .wrapper {
@@ -41,30 +41,13 @@ body {
   
 }
 
-.formz {
+.form {
   display: grid;
   grid-template-columns: auto auto;
   row-gap: 1rem;
   column-gap: 3rem;
   justify-content: center;
   align-items: center;
-}
-
-.char-amount-container {
-  display: flex;
-  align-items: center;
-
-}
-
-.num-input {
-  width: 3rem;
-}
-
-header {
-  text-align: center;
-  padding: 20px;
-  padding-top: 0px;
-  color: hsl(206, 17%, 28%);
 }
 
 .title {
@@ -76,92 +59,66 @@ label {
   font-weight: bold;
 }
 
-.card {
-  background-color: var(--tertiary-color);
-  border-radius: 5px;
-  border-width: 1px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-  color: hsl(206, 17%, 28%);
-  font-size: 18px;
-  margin: 30px;
-  max-width: 800px;
-  padding: 30px 125px;
+.character-amount-container {
+  display: flex;
+  align-items: center;
+
 }
 
-.card-header::after {
-  content: " ";
-  display: block;
-  width: 100%;
-  background: #e7e9eb;
-  height: 2px;
+.number-input {
+  width: 3rem;
 }
 
-.card-body {
-  min-height: 100px;
-}
-
-.card-footer {
+header {
   text-align: center;
-}
-
-.card-footer::before {
-  content: " ";
-  display: block;
-  width: 100%;
-  background: #e7e9eb;
-  height: 2px;
-}
-
-.card-footer::after {
-  content: " ";
-  display: block;
-  clear: both;
+  padding: 20px;
+  padding-top: 0px;
+  color: hsl(206, 17%, 28%);
 }
 
 .boton {
-  border: none;
+  grid-column: span 2;
   background-color: var(--quaternary-color);
   border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-    0px;
-  color: hsl(0, 0%, 100%);
-  display: inline-block;
-  font-size: 22px;
-  line-height: 22px;
-  margin: 16px 16px 16px 20px;
-  padding: 14px 34px;
-  text-align: center;
-  cursor: pointer;
   outline: none; 
+  border: 2px solid white;
+  color: white;
+  padding: .5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 1rem;
 }
 
 .boton:hover {
   background-color: var(--quaternary-color2);
 }
 
+/* .row {
+  margin: 20px;
+} */
+
 .float-right {
   float: right;
 }
 
-#passwordDisplay {
+.password-display {
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
-  border: none;
-  display: block;
-  width: 100%;
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 85px;
-  font-size: 1.2rem;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  height: 2rem;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-break: break-all;
   border: 2px dashed #c0c7cf;
-  border-radius: 6px;
-  resize: none;
-  overflow: hidden;
+  border-radius: .5rem;
+  overflow: auto; 
+  resize: unset;
+} 
+  
 }
 
 @media (max-width: 690px) {
@@ -171,7 +128,7 @@ label {
     padding: 10px 15px;
   }
 
-  #passwordDisplay {
+  .password-display {
     font-size: 1rem;
   }
 }

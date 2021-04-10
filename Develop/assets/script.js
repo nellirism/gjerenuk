@@ -1,11 +1,12 @@
 // Assignment code here
-const rangeCharAmt = document.getElementById ('rangeCharAmt')
-const rangeCharNumber = document.getElementById ('rangeCharNumber')
+const characterAmountRange = document.getElementById ('characterAmountRange')
+const characterAmountNumber = document.getElementById ('characterAmountNumber')
 const includeUppercaseElement = document.getElementById('includeUppercase')
 const includeNumbersElement = document.getElementById('includeNumbers')
 const includeSymbolsElement = document.getElementById('includeSymbols')
 const form = document.getElementById('passwordGeneratorForm')
 const passwordDisplay = document.getElementById('passwordDisplay')
+var btncopyEl = document.querySelector("#copy");
 
 const LOWERCASE_CHAR_CODES = arrayFromLowToHigh(65, 90)
 const UPPERCASE_CHAR_CODES = arrayFromLowToHigh(97, 122)
@@ -18,12 +19,12 @@ const SYMBOL_CHAR_CODES = arrayFromLowToHigh(33, 47).concat(
   arrayFromLowToHigh(123, 126)
 )
 
-rangeCharNumber.addEventListener('input', syncCharAmt)
-rangeCharAmt.addEventListener('input', syncCharAmt)
+characterAmountNumber.addEventListener('input', syncCharAmt)
+characterAmountRange.addEventListener('input', syncCharAmt)
 
 form.addEventListener('submit', e => {
   e.preventDefault()
-  const characterAmount = rangeCharAmt.value
+  const characterAmount = characterAmountNumber.value
   const includeUppercase = includeUppercaseElement.checked
   const includeNumbers = includeNumbersElement.checked
   const includeSymbols = includeSymbolsElement.checked
@@ -31,18 +32,15 @@ form.addEventListener('submit', e => {
   passwordDisplay.innerText = password
 })
 
-function generatePassword(rangeCharAmt, includeUppercase, 
-includeNumbers, includeSymbols) {
+function generatePassword(characterAmount, includeUppercase, includeNumbers, includeSymbols) {
   let charCodes = LOWERCASE_CHAR_CODES
-  if (includeUppercase) charCodes = charCodes.concat
-  (UPPERCASE_CHAR_CODES)
+  if (includeUppercase) charCodes = charCodes.concat(UPPERCASE_CHAR_CODES)
   if (includeSymbols) charCodes = charCodes.concat(SYMBOL_CHAR_CODES)
   if (includeNumbers) charCodes = charCodes.concat(NUMBER_CHAR_CODES)
   const passwordCharacters = []
-
-  for (let i = 0; i < rangeCharAmt; i++) {
-    const characterCode = charCodes[Math.floor(Math.random() * rangeCharAmt)]
-    passwordCharacters.push(string.fromCharcode(characterCode))
+  for (let i = 0; i < characterAmount; i++) {
+    const characterCode = charCodes[Math.floor(Math.random() * charCodes.length)]
+    passwordCharacters.push(String.fromCharCode(characterCode))
   }
   return passwordCharacters.join('')
   
@@ -58,10 +56,17 @@ function arrayFromLowToHigh(low, high) {
 
 function syncCharAmt(e) {
   const value = e.target.value
-  rangeCharNumber.value = value
-  rangeCharAmt.value = value
+  characterAmountNumber.value = value
+  characterAmountRange.value = value
 }
 
+//Copy to clip board button
+debugger;
+btncopyEl.addEventListener("click", function () {
+  passwordDisplay.select();
+  document.execCommand("copy");
+  alert("Copied your new password");
+})
 
 // Get references to the #generate element
 //var generateBtn = document.querySelector("#generate");
